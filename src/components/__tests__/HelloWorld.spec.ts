@@ -8,4 +8,8 @@ describe("HelloWorld", () => {
     const wrapper = mount(HelloWorld, { props: { msg: "Hello Vitest" } });
     expect(wrapper.text()).toContain("Hello Vitest");
   });
+  it("there is HelloWorld cmp"),
+    () => {
+      console.log(HelloWorld);
+    };
 });
