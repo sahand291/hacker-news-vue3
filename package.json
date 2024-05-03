@@ -12,7 +12,8 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mt,css,scss}": "npm run format"
@@ -36,7 +37,7 @@
     "eslint": "^8.57.0",
     "eslint-plugin-playwright": "^1.5.4",
     "eslint-plugin-vue": "^9.23.0",
-    "husky": "^9.0.11",
+    "husky": "^8.0.0",
     "jsdom": "^24.0.0",
     "lint-staged": "^15.2.2",
     "npm-run-all2": "^6.1.2",
