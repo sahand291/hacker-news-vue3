@@ -4,18 +4,6 @@ import { mount } from "@vue/test-utils";
 import Item from "../Item.vue";
 
 describe("Item.vue", () => {
-  it("renders item.url", () => {
-    const item = {
-      url: "10",
-      title: "url title",
-    };
-    const wrapper = mount(Item, {
-      shallow: true,
-      props: { item },
-    });
-    expect(wrapper.text()).toContain(item.url);
-  });
-
   it("renders item.title", () => {
     const item = {
       url: "10",
@@ -39,6 +27,6 @@ describe("Item.vue", () => {
     });
     const a = wrapper.find("a");
     expect(a.text()).toContain("google");
-    expect(a.attributes().href === item.url).toBe(true);
+    expect(a.attributes().href).toBe("www.google.com");
   });
 });

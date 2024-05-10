@@ -6,7 +6,6 @@ const props = defineProps<{
 
 <template>
   <li>
-    {{ props.item.url }}
     <a :href="props.item.url">{{ props.item.title }}</a>
   </li>
 </template>
