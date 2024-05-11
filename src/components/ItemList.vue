@@ -1,5 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Item from "@/components/Item.vue";
+import { ref } from "vue";
 
-<template></template>
+const wItems = ref(window.items);
+</script>
+
+<template>
+  <Item v-for="item in wItems" :item="item" />
+</template>
 
 <style scoped></style>
