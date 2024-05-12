@@ -4,16 +4,20 @@ import { mount } from "@vue/test-utils";
 import Item from "../Item.vue";
 
 describe("Item.vue", () => {
-  it("renders item.title", () => {
+  it("renders item.title .score and .author", () => {
     const item = {
       url: "10",
       title: "url title",
+      score: "5",
+      author: "mousa",
     };
     const wrapper = mount(Item, {
       shallow: true,
       props: { item },
     });
-    expect(wrapper.find("a").text()).toContain(item.title);
+    expect(wrapper.text()).toContain(item.title);
+    expect(wrapper.text()).toContain(item.score);
+    expect(wrapper.text()).toContain(item.author);
   });
 
   it("render an url with link to item.url and title of item.title", () => {
